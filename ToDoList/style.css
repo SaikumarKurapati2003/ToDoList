@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #c3cfcd;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+.todo-container{
+    max-width: 600px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px 30px 50px;
+    margin: 120px auto 15px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px black;
+}
+.todo-container h1{
+    text-align: center;
+}
+form{
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px 0px 0px;
+    gap: 0px;
+    border-radius: 30px;/**/
+    margin-bottom: 30px;
+}
+input[type="text"]{
+    height: 100%;
+    width: 70%;
+    padding: 20px;
+    border: 4px solid #5d27ff;
+    border-radius: 30px 0px 0px 30px;
+    font-size: 1.2rem;
+}
+
+.btn{
+    height: 100%;
+    background-color: #5d27ff;
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 1.5rem;
+    /* margin-left: 20px; */
+}
+.btn:hover{
+    background-color: #4f21d8cc;
+    border: 2px solid black;
+}
+ul li{
+    list-style-type: none;
+    font-size: 1.1rem;
+    padding: 10px 6px 10px 30px;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: "☐";          
+    font-size: 25px;
+    position: absolute;
+    left: -1px;
+    top: 4px;
+}
+#task-list{
+    padding: 0px 30px;
+}
+ul li.task-completed {
+    text-decoration: line-through;
+    color: #632fff;
+}
+ul li.task-completed::before{
+    content: "☑";
+    color: #632fff;
+}
+ul li span{
+    position: absolute;
+    top: 1.8px;
+    right: 5px;
+    color: rgb(227,120,26);
+    font-size: 2rem;
+}
